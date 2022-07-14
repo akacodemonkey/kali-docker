@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile.yaml --tag akacodemonkey/kali:latest
+      run: docker build . --file DockerFile.yaml --tag akacodemonkey/kali:latest

@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ 'main' ]
   pull_request:
-    branches: [ master ]
+    branches: [ 'main' ]
 
 jobs:
 
@@ -18,7 +18,7 @@ jobs:
       uses: docker/build-push-action@v1
       with:
         context: .
-        dockerfile: Dockerfile.yml
+        dockerfile: DockerFile.yml
         push: true
         username: ${{ secrets.DOCKER_USER_NAME }}
         password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
